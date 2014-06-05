@@ -1,0 +1,13 @@
+target/*
+
+#MAC OS
+.DS_Store
+
+#Eclipse
+.settings
+.classpath
+.project
+
+#Idea
+*.iml
+.idea
