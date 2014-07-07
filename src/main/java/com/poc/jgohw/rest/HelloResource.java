@@ -1,5 +1,7 @@
 package com.poc.jgohw.rest;
 
+import com.google.appengine.api.users.UserService;
+import com.google.appengine.api.users.UserServiceFactory;
 import com.google.inject.Inject;
 import com.poc.jgohw.dao.HelloDao;
 import com.poc.jgohw.domain.Hello;
@@ -14,6 +16,8 @@ import java.util.List;
 public class HelloResource {
 
     private final HelloDao helloDAO;
+
+    private final UserService userService = UserServiceFactory.getUserService();
 
     @Inject
     public HelloResource(HelloDao helloDAO) {
@@ -37,6 +41,7 @@ public class HelloResource {
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
     public Response saveItem(Hello hello) {
+        hello.setUser(userService.getCurrentUser());
         helloDAO.insertEntity(hello);
         return Response.created(URI.create(hello.getId().toString())).entity(hello).build();
     }

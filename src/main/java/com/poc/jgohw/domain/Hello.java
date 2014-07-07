@@ -1,5 +1,6 @@
 package com.poc.jgohw.domain;
 
+import com.google.appengine.api.users.User;
 import com.google.common.base.Objects;
 import com.googlecode.objectify.annotation.Cache;
 import com.googlecode.objectify.annotation.Entity;
@@ -12,6 +13,7 @@ public class Hello {
     @Id
     private Long id;
     private String name;
+    private User user;
 
     public Long getId() {
         return id;
@@ -29,6 +31,14 @@ public class Hello {
         this.name = name;
     }
 
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
+
     @Override
     public boolean equals(Object obj) {
         return obj instanceof Hello && Objects.equal(id, ((Hello) obj).id);
@@ -44,6 +54,7 @@ public class Hello {
         return Objects.toStringHelper(this)
                 .add("id", id)
                 .add("name", name)
+                .add("user", user)
                 .toString();
     }
 }
