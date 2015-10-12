@@ -13,6 +13,8 @@ import java.net.URI;
 import java.util.List;
 
 @Path("/hello")
+@Produces(MediaType.APPLICATION_JSON)
+@Consumes(MediaType.APPLICATION_JSON)
 public class HelloResource {
 
     private final HelloDao helloDAO;
@@ -25,21 +27,17 @@ public class HelloResource {
     }
 
     @GET
-    @Produces(MediaType.APPLICATION_JSON)
     public List<Hello> fetch() {
         return helloDAO.getEntities();
     }
 
     @GET
     @Path("/{id}")
-    @Produces(MediaType.APPLICATION_JSON)
     public Hello getById(@PathParam("id") final Long id) {
         return helloDAO.getEntityById(id);
     }
 
     @POST
-    @Consumes(MediaType.APPLICATION_JSON)
-    @Produces(MediaType.APPLICATION_JSON)
     public Response saveItem(Hello hello) {
         hello.setUser(userService.getCurrentUser());
         helloDAO.insertEntity(hello);
