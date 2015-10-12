@@ -1,10 +1,10 @@
-package com.poc.jgohw.rest;
+package ezain.poc.jgohw.rest;
 
 import com.google.appengine.api.users.UserService;
 import com.google.appengine.api.users.UserServiceFactory;
 import com.google.inject.Inject;
-import com.poc.jgohw.dao.HelloDao;
-import com.poc.jgohw.domain.Hello;
+import ezain.poc.jgohw.dao.HelloDao;
+import ezain.poc.jgohw.domain.Hello;
 
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;

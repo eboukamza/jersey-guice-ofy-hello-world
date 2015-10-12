@@ -1,9 +1,9 @@
-package com.poc.jgohw.rest;
+package ezain.poc.jgohw.rest;
 
-import com.poc.jgohw.dao.impl.HelloDaoImpl;
+import ezain.poc.jgohw.dao.impl.HelloDaoImpl;
 import com.google.appengine.tools.development.testing.LocalDatastoreServiceTestConfig;
 import com.google.appengine.tools.development.testing.LocalServiceTestHelper;
-import com.poc.jgohw.domain.Hello;
+import ezain.poc.jgohw.domain.Hello;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;

@@ -1,4 +1,4 @@
-package com.poc.jgohw.dao;
+package ezain.poc.jgohw.dao;
 
 import java.util.List;
 import java.util.Map;

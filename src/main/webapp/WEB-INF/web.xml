@@ -15,7 +15,7 @@
     </filter-mapping>
 
     <listener>
-        <listener-class>com.poc.jgohw.config.MyGuiceServletContextListener</listener-class>
+        <listener-class>ezain.poc.jgohw.config.MyGuiceServletContextListener</listener-class>
     </listener>
 
     <security-constraint>

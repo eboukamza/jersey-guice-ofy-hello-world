@@ -1,4 +1,4 @@
-package com.poc.jgohw.domain;
+package ezain.poc.jgohw.domain;
 
 import com.google.appengine.api.users.User;
 import com.google.common.base.Objects;

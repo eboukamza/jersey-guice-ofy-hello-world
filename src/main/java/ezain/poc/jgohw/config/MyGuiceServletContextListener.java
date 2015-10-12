@@ -1,4 +1,4 @@
-package com.poc.jgohw.config;
+package ezain.poc.jgohw.config;
 
 import com.google.common.collect.Maps;
 import com.google.inject.Guice;

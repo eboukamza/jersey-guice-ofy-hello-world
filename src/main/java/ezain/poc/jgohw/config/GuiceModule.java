@@ -1,11 +1,11 @@
-package com.poc.jgohw.config;
+package ezain.poc.jgohw.config;
 
 import com.google.inject.AbstractModule;
 import com.google.inject.Singleton;
 import com.google.inject.servlet.RequestScoped;
 import com.googlecode.objectify.ObjectifyFilter;
-import com.poc.jgohw.dao.HelloDao;
-import com.poc.jgohw.dao.impl.HelloDaoImpl;
+import ezain.poc.jgohw.dao.HelloDao;
+import ezain.poc.jgohw.dao.impl.HelloDaoImpl;
 
 public class GuiceModule extends AbstractModule {
     public GuiceModule() { }

@@ -1,9 +1,9 @@
-package com.poc.jgohw.dao.impl;
+package ezain.poc.jgohw.dao.impl;
 
 import com.google.inject.Inject;
 import com.google.inject.Singleton;
-import com.poc.jgohw.dao.HelloDao;
-import com.poc.jgohw.domain.Hello;
+import ezain.poc.jgohw.dao.HelloDao;
+import ezain.poc.jgohw.domain.Hello;
 
 @Singleton
 public class HelloDaoImpl extends GenericDao<Hello> implements HelloDao {

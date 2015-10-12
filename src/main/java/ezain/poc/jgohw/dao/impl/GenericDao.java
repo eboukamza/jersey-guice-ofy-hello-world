@@ -1,9 +1,9 @@
-package com.poc.jgohw.dao.impl;
+package ezain.poc.jgohw.dao.impl;
 
 import com.google.appengine.repackaged.com.google.common.collect.Maps;
 import com.googlecode.objectify.ObjectifyService;
 import com.googlecode.objectify.cmd.Query;
-import com.poc.jgohw.dao.Dao;
+import ezain.poc.jgohw.dao.Dao;
 
 import java.util.List;
 import java.util.Map;
